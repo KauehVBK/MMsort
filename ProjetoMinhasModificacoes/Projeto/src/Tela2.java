@@ -89,7 +89,7 @@ public class Tela2 extends JFrame {
             return;
         }
 
-        // Extrai os ranks para um array de inteiros
+        
         int[] ranks = new int[lista.size()];
         for (int i = 0; i < lista.size(); i++) {
             String item = lista.get(i);
@@ -97,10 +97,10 @@ public class Tela2 extends JFrame {
             ranks[i] = Integer.parseInt(rankStr);
         }
 
-        // Aplica Merge Sort
+        
         Merge.mergeSort(ranks, ranks.length);
 
-        // Cria nova lista ordenada baseada nos ranks
+        
         List<String> novaLista = new ArrayList<>();
         for (int rank : ranks) {
             for (int j = 0; j < lista.size(); j++) {
@@ -113,7 +113,7 @@ public class Tela2 extends JFrame {
             }
         }
 
-        // Atualiza a lista original e a exibição
+        
         lista = novaLista;
         atualizarExibicao();
     }
